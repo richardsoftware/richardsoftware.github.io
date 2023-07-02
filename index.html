@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type = "text/css" href="gatosapi.css">
+  <title>Usando theCatAPI.com</title>
+</head>
+
+<body>
+
+<div>
+	<h1><u>Los 10 mejores Gatos del Mes</u> theCatAPI.com</h1>
+  <h2>Encuesta</h2>
+      <form>
+        
+         <fieldset>
+            <legend>¿Tenes Mascotas?<abbr title="Este campo es obligatorio" aria-label="required"></abbr></legend>
+            <!-- Solo se puede seleccionar Si o No-->
+            <input type="radio" required name="elegido" id="r1" value="yes"><label for="r1">Sí</label>
+            <input type="radio" required name="elegido" id="r2" value="no"><label for="r2">No</label><br>
+          
+             <label for="edad">¿Qué edad tienes?
+            <!-- Edad minimo 10 maximo 120 -->
+             <input id="edad" type="number" name="edad" min="10" max="120" step="1" pattern="\d+">
+             </label><br>
+
+             <!-- El mail debe contener el simbolo @ y diez caracteres como minimo -->
+            <label for="mail">E-mail:
+            <input type="email" id="mail" name="mail" minlength="10" required>
+            <span class="error" aria-live="polite"></span>
+          
+           </label>
+           <button>Enviar</button>
+       
+        </fieldset>
+         
+        <br>
+        
+      </form>
+</div>
+
+<div class="maincontent">
+   <div id="grid" class="imgrid"></div>
+</div>
+       
+<div id="uno">
+      
+  <script src="./gatosapi.js"></script>
+
+</div>
+
+</body>
+
+</html>
